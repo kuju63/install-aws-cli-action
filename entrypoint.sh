@@ -27,6 +27,9 @@ _AWS_CLI_VERSION=${_AWS_CLI_VERSION//V/} # Remove "V"
 _AWS_CLI_VERSION=${_AWS_CLI_VERSION:-$_DEFAULT_VERSION}
 _DOWNLOAD_URL=""
 _LIGHTSAIL_INSTALL=${LIGHTSAILCTL:-"false"}
+export HTTP_PROXY=${httpProxy:""}
+export HTTPS_PROXY=${httpsProxy:""}
+export NO_PROXY=${noProxy:""}
 
 msg_error(){
     msg=$1
