@@ -28,6 +28,8 @@ Add the following step to a job in your workflow
   with:
     version: 2 # default
     verbose: false # default
+    http_proxy: "" # default
+    https_proxy: "" # default
 ```
 
 ### Full example
@@ -91,6 +93,19 @@ jobs:
         uses: unfor19/install-aws-cli-action@v1
         with:
           version: 2.0.30
+      - run: aws --version
+        shell: bash
+  test_on_proxy:
+    runs-on: ubuntu-latest
+    name: on proxy
+    steps:
+      - uses: actions/checkout@v2
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2.0.30
+          http_proxy: ${{ secrets.HTTP_PROXY }}
+          https_proxy: ${{ secrets.HTTPS_PROXY }}
       - run: aws --version
         shell: bash
 ```
