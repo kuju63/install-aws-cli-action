@@ -16,6 +16,18 @@ inputs:
     description: "Install lightsailctl plugin"
     required: false
     default: false
+  httpProxy:
+    description: "HTTP_PROXY environment"
+    required: false
+    default: ""
+  httpsProxy:
+    description: "HTTPS_PROXY environment"
+    required: false
+    default: ""
+  noProxy:
+    description: "NO_PROXY environment"
+    required: false
+    default: ""
 outputs:
   version:
     description: "The AWS CLI version that was installed"
