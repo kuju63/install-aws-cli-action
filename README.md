@@ -1,4 +1,4 @@
-# install-aws-cli-action
+# setup-aws-cli
 
 Install AWS CLI on a GitHub Actions Linux host. 
 
