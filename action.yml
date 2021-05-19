@@ -1,4 +1,4 @@
-name: "install-aws-cli-action"
+name: "setup-aws-cli"
 description: "Install AWS CLI on a Linux host"
 branding:
   icon: "download-cloud"
