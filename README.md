@@ -1,6 +1,6 @@
 # setup-aws-cli
 
-Install AWS CLI on a GitHub Actions Linux host. 
+Install AWS CLI on a GitHub Actions Linux host.  Forked from [unfor19/install-aws-cli-action](https://github.com/unfor19/install-aws-cli-action)
 
 After this action, every step is capable of running `aws` CLI, and it's up to you to set the environment variables (secrets) `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
