@@ -1,13 +1,8 @@
 # install-aws-cli-action
 
-[![test](https://github.com/unfor19/install-aws-cli-action/workflows/test/badge.svg)](https://github.com/unfor19/install-aws-cli-action/actions?query=workflow%3Atest)
-[![test-action](https://github.com/unfor19/install-aws-cli-action-test/workflows/test-action/badge.svg)](https://github.com/unfor19/install-aws-cli-action-test/actions?query=workflow%3Atest-action)
-
 Install AWS CLI on a GitHub Actions Linux host. 
 
 After this action, every step is capable of running `aws` CLI, and it's up to you to set the environment variables (secrets) `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
-
-Tested in [unfor19/install-aws-cli-action-test](https://github.com/unfor19/install-aws-cli-action-test/actions?query=workflow%3Atest-action)
 
 ## Usage
 
@@ -24,7 +19,7 @@ Add the following step to a job in your workflow
 
 ```yaml
 - id: install-aws-cli
-  uses: unfor19/install-aws-cli-action@v1
+  uses: kuju63/setup-aws-cli@v1.1.0
   with:
     version: 2 # default
     verbose: false # default
@@ -44,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
       - run: aws --version
         shell: bash
 
@@ -54,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
         with:
           version: 1
       - run: aws --version
@@ -66,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
         with:
           version: 2
       - run: aws --version
@@ -78,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
         with:
           version: 1.18.1
       - run: aws --version
@@ -90,7 +85,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
         with:
           version: 2.0.30
       - run: aws --version
@@ -101,7 +96,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
+        uses: kuju63/setup-aws-cli@v1.1.0
         with:
           version: 2.0.30
           http_proxy: ${{ secrets.HTTP_PROXY }}
